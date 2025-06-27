@@ -7,7 +7,15 @@ author: gxcuizy
 date: 2018-10-20
 """
 
+def my_generator(num):
+    n=0
+    x=0
+    y=1
+    while n<num:
+        yield y
+        x,y=y,x+y
 
+    
 def get_sequence(num):
     """获取斐波拉契数列"""
     # 初始化数据
@@ -29,7 +37,7 @@ def get_sequence(num):
 if __name__ == '__main__':
     number = int(input('请输入一个数获取斐波拉契数列：'))
     # 获取数列
-    number_list = get_sequence(number)
+    number_list = my_generator(number)
     # 打印数列
     for value in number_list:
         print(value)

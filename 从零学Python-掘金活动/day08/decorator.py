@@ -16,7 +16,7 @@ def decorator_prime(prime_func_name):
     @functools.wraps(prime_func_name)
     def before(number):
         """前置输出信息"""
-        print('FatBoy，我Ask你一个Question啊：%s 是不是素数？' % number)
+        print('%s 是不是素数？' % number)
         return prime_func_name(number)
 
     return before
