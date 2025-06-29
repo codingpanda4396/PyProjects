@@ -33,7 +33,7 @@ def walk_dirs(path):
 # 程序主入口
 if __name__ == '__main__':
     # 遍历的目录
-    dir_path = 'language'
+    dir_path = r'D:\CodingPanda'
     # 自定义递归遍历
     print('-----------------递归遍历--------------------------')
     for_dirs(dir_path)

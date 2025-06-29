@@ -13,7 +13,7 @@ import struct
 # 程序主入口
 if __name__ == '__main__':
     # Base64是一种用64个字符来表示任意二进制数据的方法。python使用base64模块可以直接进行base64的编解码
-    # base64提供了b64encode()的编码方法
+    # base64提供了b64encode()的编码方法 
     test_str = b'binary\x00string'
     encode_str = base64.b64encode(test_str)
     print(encode_str)

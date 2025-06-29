@@ -18,7 +18,7 @@ def get_poins(url):
 
 
 if __name__ == '__main__':
-    poins_url = 'https://short-msg-ms.juejin.im/v1/pinList/recommend?uid=59b0de6e5188250f4850ea06&device_id=1540029862766&token=eyJhY2Nlc3NfdG9rZW4iOiJUb0s4SzZPeG44OER4VHZvIiwicmVmcmVzaF90b2tlbiI6ImdEZDhkeDc4RXZZdWZpdWYiLCJ0b2tlbl90eXBlIjoibWFjIiwiZXhwaXJlX2luIjoyNTkyMDAwfQ%3D%3D&src=web&before&limit=30'
+    poins_url = ''
     poins_result = get_poins(poins_url)
     poin_list = poins_result['d']['list']
     print('开始写入沸点内容……')

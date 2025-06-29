@@ -70,14 +70,14 @@ class GuessYourLike(object):
     def run(self):
         """执行入口"""
         print('程序开始执行……')
-        html = self.get_html()
-        like_list = []
+        html = self.get_html() #得到页面的html信息
+        like_list = [] #列表
         if html:
-            soup = BeautifulSoup(html, 'lxml')
+            soup = BeautifulSoup(html, 'lxml')#lxml解析器初始化
             like_div = soup.find(class_='d_postlist')
             li_list = like_div.find_all(name='li')
             for li_info in li_list:
-                like_info = {}
+                like_info = {}#创建字典保存每篇文章的信息
                 # 文章链接
                 article_href = li_info.a.attrs['href']
                 # 文章标题
@@ -94,7 +94,7 @@ class GuessYourLike(object):
                 like_info.update({'date': article_date})
                 like_info.update({'comment': article_comment})
                 like_info.update({'img': article_img})
-                like_list.append(like_info)
+                like_list.append(like_info)#文章信息的字典放入列表中
                 # 下载图片
                 self.download_img(article_img)
             # 猜你喜欢信息，存入json文件

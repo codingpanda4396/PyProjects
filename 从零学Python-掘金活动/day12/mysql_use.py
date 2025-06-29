@@ -141,7 +141,7 @@ if __name__ == '__main__':
     db_host = 'localhost'
     db_name = 'python'
     db_user = 'root'
-    db_pw = 'root'
+    db_pw = '439695'
     # 查看mysql版本
     show_version()
     # 建表
